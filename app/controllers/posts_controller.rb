@@ -32,8 +32,14 @@ class PostsController < ApplicationController
         if @post.update(post_params)
             redirect_to posts_path
         else
-            reder :edit
+            render :edit
         end
+    end
+
+    def destroy
+        @post = Post.find(params[:id])
+        @post.destroy   
+        redirect_to posts_path
     end
 
     private                                 # any methods listed under private will be considered 'private' to be used only by this controller
