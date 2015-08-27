@@ -8,6 +8,7 @@
     <h3><%= post.author %></h3>
     <p><%= post.body %></p>
     <%= link_to 'Show post', post_path(post) %>
+    <%= link_to 'Edit post', edit_post_path(post) %>
 <% end %>
  <!-- this loops over all the posts using a post variable for each post -->
  <!-- link_to is a helper method that takes two params: what you want it to stay and where you want it to go -->

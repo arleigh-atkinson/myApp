@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root 'static_pages#home'        # tells the app where to go when you first land on the site
+
+
+  get '/about', to: 'static_pages#about', as: 'about'
 
   resources :posts
   # The priority is based upon order of creation: first created -> highest priority.

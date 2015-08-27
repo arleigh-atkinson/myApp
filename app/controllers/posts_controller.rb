@@ -22,6 +22,20 @@ class PostsController < ApplicationController
         end
     end
 
+    def edit 
+        @post = Post.find(params[:id])
+    end
+
+    def update 
+        @post = Post.find(params[:id])
+
+        if @post.update(post_params)
+            redirect_to posts_path
+        else
+            reder :edit
+        end
+    end
+
     private                                 # any methods listed under private will be considered 'private' to be used only by this controller
 
     def post_params
