@@ -1,0 +1,13 @@
+<!-- <h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p> -->
+
+<h1> Posts </h1>
+<p><%= link_to 'New Post', new_post_path %></p>
+<% @posts.each do |post| %>
+    <h2><%= post.title %></h2>
+    <h3><%= post.author %></h3>
+    <p><%= post.body %></p>
+    <%= link_to 'Show post', post_path(post) %>
+<% end %>
+ <!-- this loops over all the posts using a post variable for each post -->
+ <!-- link_to is a helper method that takes two params: what you want it to stay and where you want it to go -->

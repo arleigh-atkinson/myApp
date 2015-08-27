@@ -1,6 +1,4 @@
-# PostgreSQL. Versions 8.2 and up are supported.
-#
-# Install the pg driver:
+# PostgreSQL. Versions 8.2 and up are supported.  # # Install the pg driver:
 #   gem install pg
 # On OS X with Homebrew:
 #   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
@@ -15,7 +13,7 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
